@@ -33,8 +33,7 @@
 │   ├── IMU_EOG_MuMu.ino                # ESP32 firmware — Android serial mode
 │   ├── mumu_bridge.py                   # Python ADB bridge script
 │   ├── EOG_AI_Engine_esp32_multi.h      # Pre-trained model (C++ header for ESP32)
-│   ├── Project_Report.pdf               # Project report
-│   └── final.docx                       # Final submission document
+│   └── Project_Report.pdf               # Project report
 │
 ├── IMU_EOG/
 │   ├── demo case/                       # Demo signal waveforms (6 classes)
