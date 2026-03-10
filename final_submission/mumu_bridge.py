@@ -571,7 +571,7 @@ def main():
     parser.add_argument('--no-visual', action='store_true', help='无 UI 纯串口模式')
     args = parser.parse_args()
 
-    print("MuMu Bridge — EOG + IMU → ADB")
+    print("MuMu Bridge — EOG + IMU → ADB") 
     print(f"  屏幕: {SCREEN_W}x{SCREEN_H}")
     print(f"  ADB:  {ADB_PATH}")
 
