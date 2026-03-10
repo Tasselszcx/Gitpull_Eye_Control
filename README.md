@@ -12,17 +12,43 @@
 
 ✅ 边缘 AI 部署 | ✅ 低延迟 <50ms | ✅ 准确率 >90% | ✅ 双模式支持
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
-├── DATA/EOG_data/          # 原始数据集
-├── final_submission/       # 部署代码
-│   ├── IMU_EOG_Mouse.ino  # PC固件
-│   ├── IMU_EOG_MuMu.ino   # Android固件
-│   ├── mumu_bridge.py     # ADB桥接
-│   └── EOG_AI_Engine_esp32_multi.h  # 预训练模型
-├── main_project/           # 训练代码
-└── train.py               # 模型训练
+├── DATA/
+│   ├── EOG_data/                        # Raw EOG dataset
+│   │   ├── 1/                           # Subject 1 (6 classes: Blink/Down/Left/Rest/Right/Up)
+│   │   ├── 2/                           # Subject 2 (5 classes)
+│   │   ├── 3/                           # Subject 3 (4 classes)
+│   │   └── Test_Simulated/              # Simulated test data
+│   ├── adb_control.py                   # ADB control utility
+│   └── visualize_synthetic.py           # Dataset visualization
+│
+├── src/
+│   ├── EOG_data_collection.py           # EOG signal acquisition script
+│   └── generate_and_train_synthetic.py  # Synthetic data generation & training
+│
+├── final_submission/                    # Final deliverables
+│   ├── IMU_EOG_Mouse.ino               # ESP32 firmware — PC USB HID mouse
+│   ├── IMU_EOG_MuMu.ino                # ESP32 firmware — Android serial mode
+│   ├── mumu_bridge.py                   # Python ADB bridge script
+│   ├── EOG_AI_Engine_esp32_multi.h      # Pre-trained model (C++ header for ESP32)
+│   ├── Project_Report.pdf               # Project report
+│   └── final.docx                       # Final submission document
+│
+├── IMU_EOG/
+│   ├── demo case/                       # Demo signal waveforms (6 classes)
+│   └── output/                          # Captured EOG signal recordings
+│
+├── virtual/                             # Virtual/emulator deployment (pruned model)
+│   ├── virtual.ino                      # ESP32 firmware for emulator
+│   └── EOG_AI_Engine_esp32_multi_15tree.h
+│
+├── train.py                             # Random Forest model training script
+├── EOG_data_collection.py               # EOG real-time data collection
+├── realtime_visualization.py            # Real-time signal visualization
+├── requirements.txt                     # Python dependencies
+└── README.md
 ```
 
 ## 🔧 快速开始
