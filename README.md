@@ -16,10 +16,12 @@
 
 ```
 ├── DATA/
-│   ├── EOG_data/                        # Raw EOG dataset
-│   │   ├── 1/                           # Subject 1 (6 classes: Blink/Down/Left/Rest/Right/Up)
-│   │   ├── 2/                           # Subject 2 (5 classes)
+│   ├── EOG_data/                        # Raw EOG dataset (10 subjects)
+│   │   ├── 1/                           # Subject 1 (4 classes: Down/Left/Right/Up)
+│   │   ├── 2/                           # Subject 2 (4 classes)
 │   │   ├── 3/                           # Subject 3 (4 classes)
+│   │   ├── ...                          # Subject 4–9
+│   │   ├── 10/                          # Subject 10 (4 classes)
 │   │   └── Test_Simulated/              # Simulated test data
 │   ├── adb_control.py                   # ADB control utility
 │   └── visualize_synthetic.py           # Dataset visualization
